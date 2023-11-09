@@ -21,9 +21,14 @@ class Course {
         modules.add(networking);
         modules.add(security);
         modules.add(cloudComp);
+
+    }
+    public ArrayList get (){
+        return modules;
     }
 }
 
+       
 class Module {
     String name;
     String code;
@@ -33,6 +38,7 @@ class Module {
         this.code = code;
         
     }
+ 
 }
 
 public class Student {
@@ -40,7 +46,7 @@ public class Student {
     String name;
     Course course;
     Module module;
-
+    ArrayList <Module> modules;
     public Student(Course courses, Module modules) {
         id = 65;
         name = "Esther";
@@ -54,9 +60,14 @@ public class Student {
     public void print() {
 
        // this.student = student;
+        System.out.println("Their name is " + this.name);
         System.out.println("Student ID: " + this.id);
         System.out.println("Their course name is: " + this.course.name);
         System.out.println("Their course ID is: " + this.course.code);
+        for (int count = 0; count< modules.size(); count++){
+            System.out.println("Their modules are "+ modules.get(count));
+        }
+       
     }
 
 
