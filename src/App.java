@@ -30,6 +30,7 @@ public class App {
         Student student = new Student(newCour,newMod);
         student.enroll(coding);
         student.print();
+        newCour.printCourse();
  
      }
  

@@ -27,5 +27,13 @@ public class Course {
     public ArrayList get (){
         return modules;
     }
+    public void printCourse() {
+
+         for (int count = 0; count< modules.size(); count++){
+             System.out.println("Their modules are "+ modules.get(count));
+         }
+        
+     }
 }
+
 
